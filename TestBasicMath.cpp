@@ -16,7 +16,9 @@ class TestBasicMath : public CPPUNIT_NS::TestCase
 {
     CPPUNIT_TEST_SUITE(TestBasicMath);
     CPPUNIT_TEST(testAddition);
+    CPPUNIT_TEST(testSubtraction);
     CPPUNIT_TEST(testMultiply);
+    CPPUNIT_TEST(testDivision;
     CPPUNIT_TEST_SUITE_END();
 
 public:
@@ -41,9 +43,21 @@ TestBasicMath::testAddition(void)
 }
 
 void
+TestBasicMath::testSubtraction(void)
+{
+    CPPUNIT_ASSERT(-1 == mTestObj->Subtraction(2,3));
+}
+
+void
 TestBasicMath::testMultiply(void)
 {
     CPPUNIT_ASSERT(6 == mTestObj->Multiply(2,3));
+}
+
+void
+TestBasicMath::testDivision(void)
+{
+    CPPUNIT_ASSERT(2 == mTestObj->Division(6,3));
 }
 
 void TestBasicMath::setUp(void)
