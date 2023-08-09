@@ -8,7 +8,7 @@
 #include <cppunit/extensions/TestFactoryRegistry.h>
 #include <cppunit/CompilerOutputter.h>
 
-#include "CBasicMath.hpp"
+#include "CBasicMath.h"
 
 using namespace std;
 
