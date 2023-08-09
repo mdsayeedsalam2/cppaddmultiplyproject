@@ -1,16 +1,14 @@
-CXX = g++                    # The C++ compiler
-INCLUDES= -I./               
-CXXFLAGS = -g $(INCLUDES)    # C++ complilation flags
-NATIVE=on            # compiles code targeted to current hardware
-TUNE=generic         # performance-tuning switch
+CXX = g++
+INCLUDES= -I./
+CXXFLAGS = -g $(INCLUDES)
+SRCM= ../CBasicMath.cpp
+OBJM = $(SRCM:.cpp=.o)
+LINKFLAGS= -lcppunit
 
-all:
-	g++ -std=c++17 CBasicMath.cpp -o CBasicMath
-	g++ -std=c++17 TestBasicMath.cpp -lcppunit -o TestBasicMath
+testbasicmath: TestBasicMath.cpp $(OBJM)
+	$(CXX) $(CXXFLAGS) -o $@ TestBasicMath.cpp $(OBJM) $(LINKFLAGS) $(LINKFLAGSLOG4) $(LIBLOG)
 
-test:
-	chmod +x CBasicMath
-	./TestBasicMath
+# Default compile
 
-clean:
-	$(RM) CBasicMath TestBasicMath
+.cpp.o:
+	$(CXX) $(CXXFLAGS) -c $< -o $@
