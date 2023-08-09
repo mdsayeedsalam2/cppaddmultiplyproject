@@ -27,7 +27,9 @@ public:
 
 protected:
     void testAddition(void);
+    void testSubtraction(void);
     void testMultiply(void);
+    void testDivision(void);
 
 private:
 
