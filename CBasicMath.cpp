@@ -1,4 +1,5 @@
 // C++ class to unit test:
+#include <iostream>
 #include "CBasicMath.h"
 
 int CBasicMath::Addition(int x, int y)
