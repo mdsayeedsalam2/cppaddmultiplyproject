@@ -12,3 +12,10 @@ testbasicmath: TestBasicMath.cpp $(OBJM)
 
 .cpp.o:
 	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+test:
+	#chmod +x hello
+	./testbasicmath
+
+clean:
+	$(RM) testbasicmath
