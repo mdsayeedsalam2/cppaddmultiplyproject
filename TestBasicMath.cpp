@@ -18,7 +18,7 @@ class TestBasicMath : public CPPUNIT_NS::TestCase
     CPPUNIT_TEST(testAddition);
     CPPUNIT_TEST(testSubtraction);
     CPPUNIT_TEST(testMultiply);
-    CPPUNIT_TEST(testDivision;
+    CPPUNIT_TEST(testDivision);
     CPPUNIT_TEST_SUITE_END();
 
 public:
