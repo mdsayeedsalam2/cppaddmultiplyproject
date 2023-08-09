@@ -1,7 +1,7 @@
 CXX = g++
 INCLUDES= -I./
 CXXFLAGS = -g $(INCLUDES)
-SRCM= ../CBasicMath.cpp
+SRCM= ./CBasicMath.cpp
 OBJM = $(SRCM:.cpp=.o)
 LINKFLAGS= -lcppunit
 
